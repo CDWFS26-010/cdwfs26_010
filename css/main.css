@@ -1,13 +1,10 @@
 /* ============================================
-   MAGIC HOME SERVICE - THÈME MARBRE LUXE
+   MAGIC HOME SERVICE 
    ============================================
-   Version: 3.0 - Marble Edition
-   Palette: Marbre blanc, noir profond, or élégant
+   Palette: Marbre blanc, noir profond
    ============================================ */
 
-/* ============================================
-   VARIABLES CSS - THÈME MARBRE
-============================================ */
+
 :root {
     --color-primary: #0a0a0a;
     --color-primary-light: #1a1a1a;
@@ -311,7 +308,7 @@ button:focus {
 }
 
 /* ============================================
-   HERO LUXE - MARBRE BLANC
+   HERO - MARBRE BLANC
 ============================================ */
 .hero {
     margin-top: 80px;
@@ -840,7 +837,7 @@ section {
 }
 
 /* ============================================
-   GALERIE LUXE
+   GALERIE 
 ============================================ */
 .gallery {
     background: var(--color-marble-light);
@@ -920,9 +917,7 @@ section {
     border-top: 2px solid var(--color-accent);
 }
 
-/* ============================================
-   CTA SECTION
-============================================ */
+/* CTA SECTION */
 .cta {
     background: 
         linear-gradient(135deg, 
@@ -952,7 +947,7 @@ section {
 }
 
 /* ============================================
-   FOOTER LUXE
+   FOOTER 
 ============================================ */
 footer {
     background: linear-gradient(180deg, 
@@ -1073,26 +1068,26 @@ footer a:focus {
 /* Version Mobile (en dessous de 600px) */
 @media (max-width: 600px) {
     .services-grid {
-        grid-template-columns: 1fr; /* 1 colonne par ligne */
-        gap: 2rem; /* On réduit un peu l'espace entre les cartes */
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
     }
 }
 
 /*version tablette*/
 @media (min-width: 600px) and (max-width: 1023px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes par ligne */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 /* Version Bureau (au dessus de 1024px) */
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colonnes par ligne */
+        grid-template-columns: repeat(2, 1fr); /* 3 colonnes par ligne */
     }
 }
 /* ============================================
-   SECTION CONTACT & FORMULAIRE LUXE
+   SECTION CONTACT & FORMULAIRE 
 ============================================ */
 .contact {
     background: var(--color-bg);

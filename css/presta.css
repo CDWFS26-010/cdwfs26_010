@@ -2,16 +2,21 @@
    VARIABLES – Palette élégante & Minimaliste
 ============================================ */
 :root {
-    --color-primary: #1a1a1a;    /* Presque noir pour le texte important */
-    --color-secondary: #4a4a4a;  /* Gris foncé pour le texte secondaire */
-    --color-accent: hsl(0, 0%, 0%);     /* Doré plus subtil, moins "jaune" */
-    --color-bg-light: #fdfdfd;   /* Blanc cassé très léger */
+    --color-primary: #1a1a1a;
+    /* Presque noir pour le texte important */
+    --color-secondary: #4a4a4a;
+    /* Gris foncé pour le texte secondaire */
+    --color-accent: hsl(0, 0%, 0%);
+    /* Doré plus subtil, moins "jaune" */
+    --color-bg-light: #fdfdfd;
+    /* Blanc cassé très léger */
     --color-white: #ffffff;
     --border-color: #eeeeee;
-    
+
     --font-serif: 'Cormorant Garamond', serif;
-    --font-sans: 'Lora', serif; /* Gardé Lora pour le corps car très lisible */
-    
+    --font-sans: 'Lora', serif;
+    /* Gardé Lora pour le corps car très lisible */
+
     --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
@@ -28,7 +33,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-serif);
     color: var(--color-primary);
     font-weight: 500;
@@ -40,16 +47,16 @@ h1, h2, h3 {
 ============================================ */
 .hero-prestation {
     padding: 10rem 2rem 6rem;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.8), var(--color-bg-light)), 
-                url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1600') center/cover;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), var(--color-bg-light)),
+        url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1600') center/cover;
     text-align: center;
 }
 
-.burger{
+.burger {
     color: white;
 }
 
-.burger:hover{
+.burger:hover {
     color: white;
 }
 
@@ -109,7 +116,8 @@ h1, h2, h3 {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    filter: grayscale(100%); /* Look épuré, redevient couleur au survol si désiré */
+    filter: grayscale(100%);
+    /* Look épuré, redevient couleur au survol si désiré */
     transition: var(--transition);
 }
 
@@ -147,6 +155,7 @@ h1, h2, h3 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
+
 .avis-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,7 +217,9 @@ h1, h2, h3 {
     display: block;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 1rem 0;
     border: none;
@@ -218,7 +229,8 @@ h1, h2, h3 {
     transition: var(--transition);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
     border-bottom-color: var(--color-accent);
 }
@@ -241,10 +253,22 @@ h1, h2, h3 {
     letter-spacing: 4px;
 }
 
-.contact-details{
+.contact-details {
     text-align: center;
     background-color: #FFFFFF;
 }
+
+.avis-form {
+    text-align: center;
+    font-size: 30px;
+}
+
+#titre-form {
+    text-align: center;
+    font-size: 2.5rem !important;
+    margin-bottom: 3rem !important;
+}
+
 /* ============================================
    FOOTER & CTA
 ============================================ */
@@ -275,30 +299,58 @@ footer {
     color: #888;
 }
 
-footer a { color: #fff; text-decoration: none; }
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
 
 .title-footer {
     font-size: 1.5rem;
-    color: #fff!important;
+    color: #fff !important;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.btn-contact{
-    color: #fff!important;
-   
-}
+.btn-contact {
+    color: #fff !important;
 
+}
+.avis-texte {
+        margin-bottom: 10px;
+        color: #555;
+
+        /* Limiter à 3 lignes et ajouter "..." si trop long */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* nombre de lignes */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
 /* ============================================
    RESPONSIVE
 ============================================ */
 @media (max-width: 768px) {
-    .form-row { grid-template-columns: 1fr; }
-    .prestation-list { grid-template-columns: 1fr; }
-    .prestation-item { flex-direction: column; align-items: center; text-align: center; }
-    .hero-prestation { padding-top: 6rem; }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .prestation-list {
+        grid-template-columns: 1fr;
+    }
+
+    .prestation-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-prestation {
+        padding-top: 6rem;
+    }
 }
+
 
 
 /* ============================================
@@ -309,7 +361,7 @@ footer a { color: #fff; text-decoration: none; }
 @media (max-width: 1024px) {
     .prestation-list {
         /* On réduit le minmax pour que 2 colonnes tiennent plus longtemps */
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 1.5rem;
     }
 
@@ -320,6 +372,7 @@ footer a { color: #fff; text-decoration: none; }
 
 /* --- Mobiles et Tablettes Portrait --- */
 @media (max-width: 768px) {
+
     /* Typographie */
     h2 {
         font-size: 2rem;
@@ -328,11 +381,12 @@ footer a { color: #fff; text-decoration: none; }
 
     /* Prestations */
     .prestation-list {
-        grid-template-columns: 1fr; /* Passage strict en une colonne */
+        grid-template-columns: 1fr;
+        /* Passage strict en une colonne */
     }
 
     .prestation-item {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 1.5rem;
@@ -344,7 +398,8 @@ footer a { color: #fff; text-decoration: none; }
 
     /* Formulaire */
     .form-row {
-        grid-template-columns: 1fr; /* Nom/Prénom l'un sur l'autre */
+        grid-template-columns: 1fr;
+        /* Nom/Prénom l'un sur l'autre */
         gap: 0;
     }
 
@@ -353,13 +408,17 @@ footer a { color: #fff; text-decoration: none; }
     }
 
     .form-container {
-        padding: 0; /* On enlève les marges internes pour gagner de la place */
+        padding: 0;
+        /* On enlève les marges internes pour gagner de la place */
     }
 
     /* Avis */
     .avis-list {
         grid-template-columns: 1fr;
     }
+
+    
+
 
     /* CTA & Hero */
     .hero-prestation h1 {
@@ -371,7 +430,8 @@ footer a { color: #fff; text-decoration: none; }
     }
 
     .cta .btn {
-        width: 100%; /* Bouton pleine largeur sur mobile */
+        width: 100%;
+        /* Bouton pleine largeur sur mobile */
         box-sizing: border-box;
     }
 }

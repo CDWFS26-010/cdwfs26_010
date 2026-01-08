@@ -71,7 +71,6 @@ function envoyerAvis(e) {
     date: new Date().toLocaleDateString()
   };
   try {
-    // Simulation AJAX POST
     console.log('AJAX OK : envoi simulé vers avis.txt', avisData);
 
     // Stockage côté client
