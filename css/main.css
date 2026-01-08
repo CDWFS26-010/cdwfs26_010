@@ -134,6 +134,22 @@ button:focus {
     transition: transform 0.3s ease; /* Pour un effet au survol */
 }
 
+.sk2{
+    position: fixed;
+    bottom: 100px;    
+    right: 20px;    
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem 1.5rem;
+    z-index: 1000;   
+    font-weight: 600;
+    border-radius: 50px;
+    font-family: 'Lora', Georgia, serif;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
 .skip-link:hover {
     transform: translateY(-5px); /* Petit saut au survol */
     color: white;
@@ -1059,10 +1075,17 @@ footer a:focus {
     }
 }
 
-/* Version Bureau (au dessus de 768px) */
-@media (min-width: 600px) {
+/*version tablette*/
+@media (min-width: 600px) and (max-width: 1023px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 colonnes par ligne */
+    }
+}
+
+/* Version Bureau (au dessus de 1024px) */
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes par ligne */
     }
 }
 /* ============================================
