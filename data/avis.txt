@@ -1,0 +1,3 @@
+Jean|Dupont|Chartres|5|Travail impeccable, très professionnel.|12/03/2024
+Marie|Leroy|Lucé|4|Peinture propre et rapide.|18/03/2024
+Paul|Martin|Mainvilliers|5|Très satisfait du résultat final.|25/03/2024

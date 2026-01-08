@@ -1,0 +1,393 @@
+/* ============================================
+   VARIABLES – Palette élégante & Minimaliste
+============================================ */
+:root {
+    --color-primary: #1a1a1a;    /* Presque noir pour le texte important */
+    --color-secondary: #4a4a4a;  /* Gris foncé pour le texte secondaire */
+    --color-accent: hsl(0, 0%, 0%);     /* Doré plus subtil, moins "jaune" */
+    --color-bg-light: #fdfdfd;   /* Blanc cassé très léger */
+    --color-white: #ffffff;
+    --border-color: #eeeeee;
+    
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Lora', serif; /* Gardé Lora pour le corps car très lisible */
+    
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================
+   RESET & BASE
+============================================ */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-light);
+    color: var(--color-secondary);
+    line-height: 1.7;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* ============================================
+   HERO SECTION – Épurée
+============================================ */
+.hero-prestation {
+    padding: 10rem 2rem 6rem;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8), var(--color-bg-light)), 
+                url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1600') center/cover;
+    text-align: center;
+}
+
+.burger{
+    color: white;
+}
+
+.burger:hover{
+    color: white;
+}
+
+.hero-prestation h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-prestation p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--color-secondary);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ============================================
+   LISTE DES PRESTATIONS – Design minimal
+============================================ */
+.prestations-detail {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.prestations-detail h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.prestation-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+}
+
+.prestation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--color-white);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.prestation-item:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-5px);
+}
+
+.prestation-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%); /* Look épuré, redevient couleur au survol si désiré */
+    transition: var(--transition);
+}
+
+.prestation-item:hover .prestation-icon img {
+    filter: grayscale(0%);
+}
+
+.prestation-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+}
+
+.prestation-price {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* ============================================
+   SECTION AVIS – Style "Journal"
+============================================ */
+.avis-section {
+    padding: 6rem 1.5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.avis-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.avis-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.avis-card {
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.avis-card::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--color-accent);
+    opacity: 0.2;
+    font-family: serif;
+}
+
+.avis-note {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* ============================================
+   FORMULAIRE – Minimaliste
+============================================ */
+.form-section {
+    padding: 8rem 1.5rem;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--color-accent);
+}
+
+.btn-submit {
+    width: 100%;
+    background: var(--color-primary);
+    color: white;
+    padding: 1.2rem;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background: var(--color-accent);
+    letter-spacing: 4px;
+}
+
+.contact-details{
+    text-align: center;
+    background-color: #FFFFFF;
+}
+/* ============================================
+   FOOTER & CTA
+============================================ */
+.cta {
+    text-align: center;
+    padding: 8rem 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.cta .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border: 1px solid var(--color-primary);
+    text-decoration: none;
+    color: var(--color-primary);
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.cta .btn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+footer {
+    padding: 4rem 2rem;
+    background: #1a1a1a;
+    color: #888;
+}
+
+footer a { color: #fff; text-decoration: none; }
+
+.title-footer {
+    font-size: 1.5rem;
+    color: #fff!important;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.btn-contact{
+    color: #fff!important;
+   
+}
+
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+    .form-row { grid-template-columns: 1fr; }
+    .prestation-list { grid-template-columns: 1fr; }
+    .prestation-item { flex-direction: column; align-items: center; text-align: center; }
+    .hero-prestation { padding-top: 6rem; }
+}
+
+
+/* ============================================
+   RESPONSIVE OPTIMISÉ
+============================================ */
+
+/* --- Ajustements Généraux (Tablettes et petits écrans) --- */
+@media (max-width: 1024px) {
+    .prestation-list {
+        /* On réduit le minmax pour que 2 colonnes tiennent plus longtemps */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+        gap: 1.5rem;
+    }
+
+    .hero-prestation {
+        padding: 8rem 1.5rem 4rem;
+    }
+}
+
+/* --- Mobiles et Tablettes Portrait --- */
+@media (max-width: 768px) {
+    /* Typographie */
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Prestations */
+    .prestation-list {
+        grid-template-columns: 1fr; /* Passage strict en une colonne */
+    }
+
+    .prestation-item {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .prestation-info h3 {
+        margin-top: 1rem;
+    }
+
+    /* Formulaire */
+    .form-row {
+        grid-template-columns: 1fr; /* Nom/Prénom l'un sur l'autre */
+        gap: 0;
+    }
+
+    .form-section {
+        padding: 4rem 1rem;
+    }
+
+    .form-container {
+        padding: 0; /* On enlève les marges internes pour gagner de la place */
+    }
+
+    /* Avis */
+    .avis-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA & Hero */
+    .hero-prestation h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta {
+        padding: 4rem 1.5rem;
+    }
+
+    .cta .btn {
+        width: 100%; /* Bouton pleine largeur sur mobile */
+        box-sizing: border-box;
+    }
+}
+
+/* --- Très petits mobiles (iPhone SE, etc.) --- */
+@media (max-width: 480px) {
+    .hero-prestation {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .prestation-icon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .avis-card {
+        padding: 1.5rem;
+    }
+}
