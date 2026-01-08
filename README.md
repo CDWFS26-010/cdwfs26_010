@@ -5,6 +5,8 @@ Description du projet
 
 Ce projet consiste en la refonte front-end du site “Devis Rénovation Concept”, afin de proposer une version moderne, accessible et responsive.
 
+lien github : https://github.com/CDWFS26-010/cdwfs26_010#
+
 📝 L’objectif principal était de créer un site vitrine attractif, conforme aux bonnes pratiques HTML5, CSS3, JavaScript, SEO et accessibilité (WCAG/ARIA), tout en intégrant des fonctionnalités interactives comme le formulaire d’avis clients et l’appel AJAX.
 
 Technologies utilisées
