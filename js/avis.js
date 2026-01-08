@@ -8,14 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', envoyerAvis);
 });
 
-// ---------- LECTURE DES AVIS ----------
+// ---------- APELLE AJAX ICI !!!!!!!!!!----------
 
 async function lireAvis() {
   try {
     const response = await fetch('data/avis.txt');
     if (!response.ok) throw new Error('Erreur AJAX');
+    
 
     console.log('AJAX OK : lecture de avis.txt');
+
+    // récupération et traitement des avis. En .txt mais en json etait possible aussi.
 
     const text = await response.text();
     const lignes = text.trim().split('\n');

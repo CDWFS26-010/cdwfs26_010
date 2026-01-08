@@ -206,7 +206,10 @@ button:focus {
 
 /* Logo */
 
-
+.site-title{
+    color: white!important;
+    margin-bottom: 0!important;
+}
 @media (max-width: 600px) {
     .site-title {
         display: none;

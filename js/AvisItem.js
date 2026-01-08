@@ -2,14 +2,12 @@ export default class AvisItem extends HTMLElement {
   constructor() {
     super();
 
-    // Shadow DOM
     this.shadow = this.attachShadow({ mode: "open" });
 
-    // Wrapper
     this.container = document.createElement("article");
     this.container.classList.add("avis");
 
-    // Contenu
+  
     this.container.innerHTML = `
       <h3 class="avis-titre"></h3>
       <p class="avis-note ⭐"></p>

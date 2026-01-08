@@ -1,6 +1,35 @@
 {
-  "name": "Devis Rénovation Concept",
-  "short_name": "DRC",
-  "start_url": "index.html",
-  "display": "standalone"
+  "name": "Magic Home Service – Rénovation et Peinture",
+  "short_name": "Magic Home",
+  "description": "Artisan peintre et services de rénovation en Eure-et-Loir. Obtenez un devis gratuit et découvrez nos réalisations.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#141D40",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/logo6.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/logo6.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/logo6.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "images/logo6.png",
+      "sizes": "640x1136",
+      "type": "image/png"
+    }
+  ]
 }
